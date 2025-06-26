@@ -3,120 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOOTSTRAP PRO</title>
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a1a1a'/%3E%3Ctext x='50%' y='50%' font-family='Inter, sans-serif' font-size='70' fill='%23ffffff' text-anchor='middle' dy='.35em' font-weight='900'%3EB%3C/text%3E%3C/svg%3E" type="image/svg+xml">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>BOOTSTRAP PRO // CONSULTING</title>
+    <!-- Favicon - Simple 'B' in a dark square (monospace font) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23222'/%3E%3Ctext x='50%' y='50%' font-family='monospace' font-size='70' fill='%236f6' text-anchor='middle' dy='.35em' font-weight='bold'%3EB%3C/text%3E%3C/svg%3E" type="image/svg+xml">
     <style>
+        /* Global Reset / Basic Styles */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f0f0; /* Stark light gray */
-            color: #1a1a1a; /* Near-black for maximum contrast */
-        }
-        .container {
-            max-width: 1280px;
-        }
-        /* Custom harsh drop shadow */
-        .harsh-shadow {
-            box-shadow: 8px 8px 0px 0px #1a1a1a; /* Strong, offset black shadow */
-        }
-        /* Custom thick border for elements */
-        .thick-border {
-            border: 4px solid #1a1a1a; /* Consistent thick black border */
-        }
-        /* Button specific styles for brutalist feel */
-        .brutalist-button {
-            background-color: #1a1a1a; /* Black button background */
-            color: #ffffff; /* White text */
-            border: 4px solid #1a1a1a; /* Thick black border */
-            box-shadow: 6px 6px 0px 0px #ffeb3b; /* Harsh yellow shadow for pop */
-            transition: all 0.1s linear; /* Quick, almost jarring transition */
-        }
-        .brutalist-button:hover {
-            transform: translate(2px, 2px); /* Slight shift on hover */
-            box-shadow: 4px 4px 0px 0px #ffeb3b; /* Reduced shadow on hover */
-            background-color: #ffeb3b; /* Yellow background on hover */
-            color: #1a1a1a; /* Black text on hover */
-        }
-        .brutalist-button:active {
-            transform: translate(8px, 8px); /* Further shift on active */
-            box-shadow: 0px 0px 0px 0px #ffeb3b; /* No shadow on active */
-        }
-        /* Form input styles */
-        .brutalist-input {
-            border: 3px solid #1a1a1a; /* Slightly thinner border for inputs */
-            background-color: #ffffff;
-            color: #1a1a1a;
-            font-weight: 700;
-        }
-        .brutalist-input:focus {
-            outline: none;
-            border-color: #6366f1; /* Accent color on focus */
-            box-shadow: 4px 4px 0px 0px #6366f1; /* Harsh shadow on focus */
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #222222; /* Toned-down dark gray background */
+            color: #66ff66; /* Softer green terminal text */
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* Navigation link styles */
-        .nav-link-brutal {
-            font-weight: 700; /* Bold navigation */
-            position: relative;
-            padding-bottom: 4px; /* Space for underline */
+        .main-content {
+            flex-grow: 1;
         }
-        .nav-link-brutal::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0%;
-            height: 3px; /* Thick underline */
-            background-color: #ffeb3b; /* Yellow underline */
-            transition: width 0.2s ease-out;
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto; /* Center the content, no border here */
+            padding: 15px;
+            box-sizing: border-box;
         }
-        .nav-link-brutal:hover::after {
+
+        /* Headings */
+        h1 {
+            font-size: 2.2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: left;
+            text-transform: uppercase;
+            color: #44ffff; /* Softer cyan for main highlights */
+            border-bottom: 1px solid #44ffff;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-align: left;
+            text-transform: uppercase;
+            color: #ffff66; /* Softer yellow for section titles */
+            border-bottom: 1px solid #ffff66;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            text-align: left;
+            text-transform: uppercase;
+            color: #44ffff; /* Softer cyan for sub-headings */
+        }
+
+        /* Header */
+        header {
+            background-color: #1a1a1a; /* Slightly darker header */
+            color: #66ff66;
+            padding: 10px 0;
+            border-bottom: 1px solid #44ff44; /* Green border for consistency */
+            text-align: center;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border: none;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header a {
+            color: #66ff66;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        header a:hover {
+            color: #ffff66; /* Yellow hover */
+        }
+
+        header nav {
+            margin-top: 5px;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        header nav a {
+            font-size: 0.9em;
+            color: #44ffff; /* Cyan for nav */
+        }
+        header nav a:hover {
+            color: #ffff66;
+        }
+
+        /* Sections */
+        section {
+            background-color: #111111; /* Very dark gray for sections */
+            border: 1px solid #44ff44; /* Single green border */
+            padding: 30px 20px;
+            margin: 20px auto;
+            max-width: 760px;
+            box-sizing: border-box;
+        }
+        
+        section p {
+            margin-bottom: 1em;
+            font-size: 1em;
+            color: #66ff66; /* Green text */
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            background-color: #000;
+            color: #ffff66; /* Yellow text */
+            border: 1px solid #44ff44; /* Green border */
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+            transition: background-color 0.05s, color 0.05s, border-color 0.05s;
+        }
+
+        .button:hover {
+            background-color: #44ff44; /* Green background on hover */
+            color: #000;
+            border-color: #000;
+        }
+        .button:active {
+            background-color: #ffff66; /* Yellow on active */
+            color: #000;
+            border-color: #000;
+        }
+
+        /* Service Cards */
+        .service-grid {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background-color: #1a1a1a; /* Darker background for cards */
+            border: 1px solid #ffff66; /* Yellow border */
+            padding: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+            color: #66ff66; /* Green text */
+        }
+        .service-card:last-child {
+            margin-bottom: 0;
+        }
+        .service-card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .service-card .icon-text {
+            color: #ff66ff; /* Softer magenta for icon-like characters */
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .service-card p {
+            font-size: 0.9em;
+        }
+
+        /* Form */
+        form {
+            background-color: #1a1a1a; /* Dark background for form */
+            border: 1px solid #44ffff; /* Cyan border */
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
             width: 100%;
+            padding: 8px;
+            border: 1px solid #44ff44; /* Green input border */
+            background-color: #000000; /* Black input background */
+            color: #ffff66; /* Yellow input text */
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            resize: vertical;
+        }
+        form input[type="text"]:focus,
+        form input[type="email"]:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #ff66ff; /* Magenta focus outline */
+            box-shadow: 0 0 0 1px #ff66ff;
+        }
+        form button[type="submit"] {
+            margin-top: 10px;
+            width: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #66ff66;
+            padding: 10px 0;
+            text-align: center;
+            border-top: 1px solid #44ff44; /* Green border for consistency */
+            margin-top: 20px;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+
+        footer div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        footer a {
+            color: #44ffff; /* Cyan links */
+            text-decoration: none;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+        footer a:hover {
+            color: #ffff66;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.2em; }
+            .container { padding: 10px; margin: 15px auto; }
+            section { padding: 20px 10px; margin: 15px auto; }
+            header .container { flex-direction: column; text-align: center; align-items: flex-start; }
+            header a { text-align: left; width: 100%; margin-bottom: 5px;}
+            header nav { width: 100%; }
+            header nav ul { flex-direction: row; justify-content: center; gap: 8px; }
+            .button { padding: 8px 15px; font-size: 0.9em; }
+            .service-card { padding: 10px; }
+            form { padding: 15px; }
+        }
+
+        @media (max-width: 480px) {
+            header nav ul { flex-direction: column; align-items: flex-start; gap: 5px; }
+            .service-card .icon-text { margin-right: 5px; }
         }
     </style>
 </head>
-<body class="antialiased">
-    <!-- Header Section -->
-    <header class="bg-blue-600 text-white py-6 px-4 thick-border rounded-b-none border-t-0 border-l-0 border-r-0">
-        <div class="container mx-auto flex justify-between items-center flex-wrap">
-            <!-- Brand/Logo - intentionally slightly off-center by design -->
-            <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-widest px-4 py-2 thick-border bg-white text-black hover:bg-black hover:text-white transition-colors duration-200 harsh-shadow">
-                BOOTSTRAP PRO
-            </a>
-            <!-- Navigation -->
-            <nav class="mt-4 md:mt-0">
-                <ul class="flex space-x-6 md:space-x-8 text-lg md:text-xl">
-                    <li><a href="#about" class="nav-link-brutal">ABOUT ME</a></li>
-                    <li><a href="#services" class="nav-link-brutal">SERVICES</a></li>
-                    <li><a href="#contact" class="nav-link-brutal">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body>
+    <div class="main-content">
+        <!-- Header Section -->
+        <header>
+            <div class="container">
+                <!-- Brand/Logo -->
+                <a href="#">BOOTSTRAP PRO</a>
+                <!-- Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="bg-yellow-300 py-20 px-6 thick-border mx-auto my-12 max-w-6xl harsh-shadow">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-black text-black mb-8 leading-tight tracking-tighter uppercase">
-                BUILD YOUR BUSINESS. <br> NO EXCUSES.
-            </h1>
-            <p class="text-xl md:text-2xl text-black mb-12 max-w-4xl mx-auto font-bold">
-                I deliver direct, no-nonsense strategies to launch and scale your venture with minimal outside capital. Focus on resources, build independence.
-            </p>
-            <a href="#contact" class="inline-block brutalist-button font-black py-4 px-10 rounded-none uppercase text-xl">
-                GET STARTED NOW
-            </a>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section>
+            <div class="container text-center">
+                <h1>BUILD YOUR BUSINESS. <br> NO EXCUSES.</h1>
+                <p>
+                    I deliver direct, no-nonsense strategies to launch and scale your venture with minimal outside capital. Focus on resources, build independence.
+                </p>
+                <a href="#contact" class="button">GET STARTED NOW</a>
+            </div>
+        </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="bg-white py-16 px-6 thick-border mx-auto my-12 max-w-6xl harsh-shadow">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-black text-black text-center mb-16 uppercase">ABOUT ME</h2>
-            <div class="max-w-4xl mx-auto text-lg md:text-xl text-gray-800 leading-relaxed space-y-6 font-medium">
+        <!-- About Me Section -->
+        <section id="about">
+            <div class="container">
+                <h2>ABOUT ME</h2>
                 <p>
                     I build. I create. I disrupt. My passion lies in crafting business models and technologies that defy convention. With a background rooted in software and large-scale internet systems, I equip companies to wield public cloud resources with maximum efficiency.
                 </p>
@@ -127,83 +333,66 @@
                     My expertise is in public cloud optimization. I guide businesses through its complexities. My singular aim is to provide concrete strategies for self-sufficiency, ensuring your enterprise flourishes without reliance on external capital.
                 </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="bg-blue-300 py-16 px-6 thick-border mx-auto my-12 max-w-6xl harsh-shadow">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-black text-black text-center mb-16 uppercase">HOW I DELIVER</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Service Card 1 -->
-                <div class="bg-white p-8 rounded-none thick-border harsh-shadow transform transition duration-150 ease-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
-                    <div class="text-blue-600 mb-6 flex justify-center">
-                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2>HOW I DELIVER</h2>
+                <div class="service-grid">
+                    <!-- Service Card 1 -->
+                    <div class="service-card">
+                        <h3><span class="icon-text">[>]</span> Lean Strategy</h3>
+                        <p>
+                            Develop a business model that prioritizes brutal efficiency. Minimize upfront costs. Every resource counts. No waste.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-black text-black mb-4 text-center uppercase">Lean Strategy</h3>
-                    <p class="text-gray-800 text-base text-center font-medium">
-                        Develop a business model that prioritizes brutal efficiency. Minimize upfront costs. Every resource counts. No waste.
-                    </p>
-                </div>
 
-                <!-- Service Card 2 -->
-                <div class="bg-white p-8 rounded-none thick-border harsh-shadow transform transition duration-150 ease-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
-                    <div class="text-blue-600 mb-6 flex justify-center">
-                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1L21 6m-4 2a2 2 0 11-4 0 2 2 0 014 0zM12 18a2 2 0 11-4 0 2 2 0 014 0zM12 12a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <!-- Service Card 2 -->
+                    <div class="service-card">
+                        <h3><span class="icon-text">[>]</span> Cost Optimization</h3>
+                        <p>
+                            Ruthlessly identify cost centers. Leverage free, low-cost, or open-source tools. Maximize budget impact.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-black text-black mb-4 text-center uppercase">Cost Optimization</h3>
-                    <p class="text-gray-800 text-base text-center font-medium">
-                        Ruthlessly identify cost centers. Leverage free, low-cost, or open-source tools. Maximize budget impact.
-                    </p>
-                </div>
 
-                <!-- Service Card 3 -->
-                <div class="bg-white p-8 rounded-none thick-border harsh-shadow transform transition duration-150 ease-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
-                    <div class="text-blue-600 mb-6 flex justify-center">
-                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 8a8 8 0 01-8-8c0-5.741 4.759-8 8-8s8 2.259 8 8a8 8 0 01-8 8z"></path></svg>
+                    <!-- Service Card 3 -->
+                    <div class="service-card">
+                        <h3><span class="icon-text">[>]</span> Organic Growth</h3>
+                        <p>
+                            Unleash aggressive, organic growth tactics. No reliance on bloated marketing. Exploit community, content, and pure grit.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-black text-black mb-4 text-center uppercase">Organic Growth</h3>
-                    <p class="text-gray-800 text-base text-center font-medium">
-                        Unleash aggressive, organic growth tactics. No reliance on bloated marketing. Exploit community, content, and pure grit.
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call to Action / Contact Section -->
-    <section id="contact" class="bg-red-500 text-white py-20 px-6 thick-border mx-auto my-12 max-w-6xl harsh-shadow">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase">READY TO EXECUTE?</h2>
-            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-bold">
-                Let's discuss how my strategies will forge your resilient, self-sustaining business from the ground up.
-            </p>
-            <form id="contactForm" action="https://formspree.io/f/xdkzpbpr" method="POST" class="max-w-xl mx-auto bg-white p-10 rounded-none thick-border harsh-shadow">
-                <div class="mb-6">
-                    <input type="text" id="name" name="name" placeholder="YOUR NAME" class="w-full px-5 py-3 rounded-none brutalist-input text-base" required>
-                </div>
-                <div class="mb-6">
-                    <input type="email" id="email" name="email" placeholder="YOUR EMAIL" class="w-full px-5 py-3 rounded-none brutalist-input text-base" required>
-                </div>
-                <div class="mb-8">
-                    <textarea id="message" name="message" rows="6" placeholder="TELL ME YOUR VISION..." class="w-full px-5 py-3 rounded-none brutalist-input text-base" required></textarea>
-                </div>
-                <button type="submit" class="w-full brutalist-button font-black py-4 px-8 rounded-none uppercase text-xl">
-                    SEND INQUIRY
-                </button>
-                <div id="formStatus" class="mt-6 text-center text-base font-bold text-black"></div>
-            </form>
-        </div>
-    </section>
+        <!-- Call to Action / Contact Section -->
+        <section id="contact">
+            <div class="container text-center">
+                <h2>READY TO EXECUTE?</h2>
+                <p>
+                    Let's discuss how my strategies will forge your resilient, self-sustaining business from the ground up.
+                </p>
+                <form id="contactForm" action="https://formspree.io/f/xdkzpbpr" method="POST">
+                    <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
+                    <input type="email" id="email" name="email" placeholder="YOUR EMAIL" required>
+                    <textarea id="message" name="message" rows="6" placeholder="TELL ME YOUR VISION..." required></textarea>
+                    <button type="submit" class="button">SEND INQUIRY</button>
+                    <div id="formStatus" style="margin-top: 15px; font-weight: bold; color: #66ff66;"></div>
+                </form>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer Section -->
-    <footer class="bg-black text-white py-10 mt-16 thick-border rounded-t-none border-b-0 border-l-0 border-r-0">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-base font-bold uppercase">&copy; 2025 BOOTSTRAP PRO. ALL RIGHTS RESERVED.</p>
-            <div class="flex flex-wrap justify-center space-x-6 md:space-x-8 mt-6 text-base font-bold uppercase">
-                <a href="#" class="hover:text-yellow-300 transition duration-150">PRIVACY</a>
-                <a href="#" class="hover:text-yellow-300 transition duration-150">TERMS</a>
-                <a href="https://www.linkedin.com/in/vadimska/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition duration-150">LINKEDIN</a>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BOOTSTRAP PRO. ALL RIGHTS RESERVED.</p>
+            <div>
+                <a href="#">PRIVACY</a>
+                <a href="#">TERMS</a>
+                <a href="https://www.linkedin.com/in/vadimska/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
             </div>
         </div>
     </footer>
@@ -216,22 +405,22 @@
             const submitButton = form.querySelector('button[type="submit"]');
 
             formStatus.textContent = 'SENDING...';
-            formStatus.className = 'mt-6 text-center text-base font-bold text-blue-600'; // Using a blue for "sending" status
-            submitButton.disabled = true; // Disable button during submission
+            formStatus.style.color = '#ffff66'; // Yellow for sending status
+            submitButton.disabled = true;
 
             try {
                 const response = await fetch(form.action, {
                     method: form.method,
                     body: new FormData(form),
                     headers: {
-                        'Accept': 'application/json' // Crucial for Formspree to return JSON response
+                        'Accept': 'application/json'
                     }
                 });
 
                 if (response.ok) {
                     formStatus.textContent = 'MESSAGE SENT! THANK YOU.';
-                    formStatus.className = 'mt-6 text-center text-base font-bold text-green-600'; // Bold green for success
-                    form.reset(); // Clear the form
+                    formStatus.style.color = '#66ff66'; // Green for success
+                    form.reset();
                 } else {
                     const data = await response.json();
                     let errorMessage = 'ERROR! PLEASE TRY AGAIN.';
@@ -239,14 +428,14 @@
                         errorMessage = 'ERROR: ' + data.errors.map(err => err.message).join(', ');
                     }
                     formStatus.textContent = errorMessage;
-                    formStatus.className = 'mt-6 text-center text-base font-bold text-red-600'; // Bold red for error
+                    formStatus.style.color = '#ff6666'; // Red for error
                 }
             } catch (error) {
                 console.error('Submission error:', error);
                 formStatus.textContent = 'NETWORK ERROR. TRY AGAIN LATER.';
-                formStatus.className = 'mt-6 text-center text-base font-bold text-red-600';
+                formStatus.style.color = '#ff6666'; // Red for network error
             } finally {
-                submitButton.disabled = false; // Re-enable button
+                submitButton.disabled = false;
             }
         });
     </script>
