@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOTSTRAP PRO - CONSULTING</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f0; /* Stark light gray */
+            color: #1a1a1a; /* Near-black for maximum contrast */
+        }
+        .container {
+            max-width: 1280px;
+        }
+        /* Custom harsh drop shadow */
+        .harsh-shadow {
+            box-shadow: 8px 8px 0px 0px #1a1a1a; /* Strong, offset black shadow */
+        }
+        /* Custom thick border for elements */
+        .thick-border {
+            border: 4px solid #1a1a1a; /* Consistent thick black border */
+        }
+        /* Button specific styles for brutalist feel */
+        .brutalist-button {
+            background-color: #1a1a1a; /* Black button background */
+            color: #ffffff; /* White text */
+            border: 4px solid #1a1a1a; /* Thick black border */
+            box-shadow: 6px 6px 0px 0px #ffeb3b; /* Harsh yellow shadow for pop */
+            transition: all 0.1s linear; /* Quick, almost jarring transition */
+        }
+        .brutalist-button:hover {
+            transform: translate(2px, 2px); /* Slight shift on hover */
+            box-shadow: 4px 4px 0px 0px #ffeb3b; /* Reduced shadow on hover */
+            background-color: #ffeb3b; /* Yellow background on hover */
+            color: #1a1a1a; /* Black text on hover */
+        }
+        .brutalist-button:active {
+            transform: translate(8px, 8px); /* Further shift on active */
+            box-shadow: 0px 0px 0px 0px #ffeb3b; /* No shadow on active */
+        }
+        /* Form input styles */
+        .brutalist-input {
+            border: 3px solid #1a1a1a; /* Slightly thinner border for inputs */
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        .brutalist-input:focus {
+            outline: none;
+            border-color: #6366f1; /* Accent color on focus */
+            box-shadow: 4px 4px 0px 0px #6366f1; /* Harsh shadow on focus */
+        }
+
+        /* Navigation link styles */
+        .nav-link-brutal {
+            font-weight: 700; /* Bold navigation */
+            position: relative;
+            padding-bottom: 4px; /* Space for underline */
+        }
+        .nav-link-brutal::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 3px; /* Thick underline */
+            background-color: #ffeb3b; /* Yellow underline */
+            transition: width 0.2s ease-out;
+        }
+        .nav-link-brutal:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white py-8 px-6 thick-border rounded-b-none border-t-0 border-l-0 border-r-0">
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <!-- Brand/Logo - intentionally slightly off-center by design -->
+            <a href="#" class="text-4xl font-extrabold tracking-widest px-5 py-3 thick-border bg-white text-black hover:bg-black hover:text-white transition-colors duration-200 harsh-shadow">
+                BOOTSTRAP PRO
+            </a>
+            <!-- Navigation -->
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex space-x-8 md:space-x-12 text-2xl">
+                    <li><a href="#about" class="nav-link-brutal">ABOUT ME</a></li>
+                    <li><a href="#services" class="nav-link-brutal">SERVICES</a></li>
+                    <li><a href="#contact" class="nav-link-brutal">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-yellow-300 py-28 px-8 thick-border mx-auto my-16 max-w-6xl harsh-shadow">
+        <div class="container mx-auto text-center">
+            <h1 class="text-7xl md:text-8xl font-black text-black mb-10 leading-tight tracking-tighter uppercase">
+                BUILD YOUR BUSINESS. <br> NO EXCUSES.
+            </h1>
+            <p class="text-3xl md:text-4xl text-black mb-16 max-w-4xl mx-auto font-bold">
+                I deliver direct, no-nonsense strategies to launch and scale your venture with minimal outside capital. Focus on resources, build independence.
+            </p>
+            <a href="#contact" class="inline-block brutalist-button font-black py-5 px-12 rounded-none uppercase text-2xl">
+                GET STARTED NOW
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="bg-white py-24 px-8 thick-border mx-auto my-16 max-w-6xl harsh-shadow">
+        <div class="container mx-auto">
+            <h2 class="text-6xl font-black text-black text-center mb-20 uppercase">ABOUT ME</h2>
+            <div class="max-w-4xl mx-auto text-2xl text-gray-800 leading-relaxed space-y-8 font-medium">
+                <p>
+                    I build. I create. I disrupt. My passion lies in crafting business models and technologies that defy convention. With a background rooted in software and large-scale internet systems, I equip companies to wield public cloud resources with maximum efficiency.
+                </p>
+                <p>
+                    Operational streamlining through technology is my obsession. I zero in on tangible, practical improvements that fuel sustainable growth. My philosophy: treat the company as a product, and employees as customers. This drives genuine value.
+                </p>
+                <p>
+                    My expertise is in public cloud optimization. I guide businesses through its complexities. My singular aim is to provide concrete strategies for self-sufficiency, ensuring your enterprise flourishes without reliance on external capital.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-blue-300 py-24 px-8 thick-border mx-auto my-16 max-w-6xl harsh-shadow">
+        <div class="container mx-auto">
+            <h2 class="text-6xl font-black text-black text-center mb-20 uppercase">HOW I DELIVER</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-12 rounded-none thick-border harsh-shadow transform transition duration-150 ease-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+                    <div class="text-blue-600 mb-8 flex justify-center">
+                        <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-black text-black mb-6 text-center uppercase">Lean Strategy</h3>
+                    <p class="text-gray-800 text-xl text-center font-medium">
+                        Develop a business model that prioritizes brutal efficiency. Minimize upfront costs. Every resource counts. No waste.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white p-12 rounded-none thick-border harsh-shadow transform transition duration-150 ease-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+                    <div class="text-blue-600 mb-8 flex justify-center">
+                        <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1L21 6m-4 2a2 2 0 11-4 0 2 2 0 014 0zM12 18a2 2 0 11-4 0 2 2 0 014 0zM12 12a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-black text-black mb-6 text-center uppercase">Cost Optimization</h3>
+                    <p class="text-gray-800 text-xl text-center font-medium">
+                        Ruthlessly identify cost centers. Leverage free, low-cost, or open-source tools. Maximize budget impact.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white p-12 rounded-none thick-border harsh-shadow transform transition duration-150 ease-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+                    <div class="text-blue-600 mb-8 flex justify-center">
+                        <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 8a8 8 0 01-8-8c0-5.741 4.759-8 8-8s8 2.259 8 8a8 8 0 01-8 8z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-black text-black mb-6 text-center uppercase">Organic Growth</h3>
+                    <p class="text-gray-800 text-xl text-center font-medium">
+                        Unleash aggressive, organic growth tactics. No reliance on bloated marketing. Exploit community, content, and pure grit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contact" class="bg-red-500 text-white py-28 px-8 thick-border mx-auto my-16 max-w-6xl harsh-shadow">
+        <div class="container mx-auto text-center">
+            <h2 class="text-6xl md:text-7xl font-black mb-10 uppercase">READY TO EXECUTE?</h2>
+            <p class="text-2xl md:text-3xl mb-16 max-w-3xl mx-auto font-bold">
+                Let's discuss how my strategies will forge your resilient, self-sustaining business from the ground up.
+            </p>
+            <form id="contactForm" action="https://formspree.io/f/xdkzpbpr" method="POST" class="max-w-xl mx-auto bg-white p-12 rounded-none thick-border harsh-shadow">
+                <div class="mb-8">
+                    <input type="text" id="name" name="name" placeholder="YOUR NAME" class="w-full px-6 py-4 rounded-none brutalist-input text-xl" required>
+                </div>
+                <div class="mb-8">
+                    <input type="email" id="email" name="email" placeholder="YOUR EMAIL" class="w-full px-6 py-4 rounded-none brutalist-input text-xl" required>
+                </div>
+                <div class="mb-10">
+                    <textarea id="message" name="message" rows="8" placeholder="TELL ME YOUR VISION..." class="w-full px-6 py-4 rounded-none brutalist-input text-xl" required></textarea>
+                </div>
+                <button type="submit" class="w-full brutalist-button font-black py-5 px-10 rounded-none uppercase text-2xl">
+                    SEND INQUIRY
+                </button>
+                <div id="formStatus" class="mt-8 text-center text-xl font-bold text-black"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-12 mt-20 thick-border rounded-t-none border-b-0 border-l-0 border-r-0">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xl font-bold uppercase">&copy; 2025 BOOTSTRAP PRO. ALL RIGHTS RESERVED.</p>
+            <div class="flex flex-wrap justify-center space-x-8 md:space-x-12 mt-8 text-xl font-bold uppercase">
+                <a href="#" class="hover:text-yellow-300 transition duration-150">PRIVACY</a>
+                <a href="#" class="hover:text-yellow-300 transition duration-150">TERMS</a>
+                <a href="https://www.linkedin.com/in/vadimska/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition duration-150">LINKEDIN</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const form = event.target;
+            const formStatus = document.getElementById('formStatus');
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            formStatus.textContent = 'SENDING...';
+            formStatus.className = 'mt-8 text-center text-xl font-bold text-blue-600'; // Using a blue for "sending" status
+            submitButton.disabled = true; // Disable button during submission
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json' // Crucial for Formspree to return JSON response
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.textContent = 'MESSAGE SENT! THANK YOU.';
+                    formStatus.className = 'mt-8 text-center text-xl font-bold text-green-600'; // Bold green for success
+                    form.reset(); // Clear the form
+                } else {
+                    const data = await response.json();
+                    let errorMessage = 'ERROR! PLEASE TRY AGAIN.';
+                    if (data.errors) {
+                        errorMessage = 'ERROR: ' + data.errors.map(err => err.message).join(', ');
+                    }
+                    formStatus.textContent = errorMessage;
+                    formStatus.className = 'mt-8 text-center text-xl font-bold text-red-600'; // Bold red for error
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                formStatus.textContent = 'NETWORK ERROR. TRY AGAIN LATER.';
+                formStatus.className = 'mt-8 text-center text-xl font-bold text-red-600';
+            } finally {
+                submitButton.disabled = false; // Re-enable button
+            }
+        });
+    </script>
+</body>
+</html>
